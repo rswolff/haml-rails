@@ -7,12 +7,11 @@
           %li= msg
 
 <% for attribute in attributes -%>
-  .control-group
-    = f.label :<%= attribute.name %>, class: 'control-label'
-    .controls
+  .form-group
+    = f.label :<%= attribute.name %>, class: 'col-lg-2 control-label'
+    .col-lg-10
       = f.<%= attribute.field_type %> :<%= attribute.name %>
 <% end -%>
-  .control-group
-    .controls
-      .actions
-        = f.submit 'Save', class: 'btn btn-primary'
+  .form-group
+    .col-lg-offset-2 col-lg-10
+        = f.submit 'Save', class: 'btn btn-default'
