@@ -1,17 +1,29 @@
 # Haml-rails
 
-<<<<<<< HEAD
+
 This is a forked version of indiret/haml-rails that uses Twitter Bootstrap classes for styling scaffold generators.
 =======
-Haml-rails provides Haml generators for Rails 3. It also enables Haml as the templating engine for you, so you don't have to screw around in your own application.rb when your Gemfile already clearly indicated what templating engine you have installed. Hurrah.
+Haml-rails provides Haml generators for Rails 4. It also enables Haml as the templating engine for you, so you don't have to screw around in your own application.rb when your Gemfile already clearly indicated what templating engine you have installed. Hurrah.
+
 
 To use it, add this line to your Gemfile:
 
     gem "haml-rails"
 
-Pretty fancy, eh?
+This ensures that:
+  * Any time you generate a controller or scaffold, you'll get Haml templates (instead of ERB)
+  * When your Rails application loads, Haml will be loaded and initialized automatically
+  * Haml templates will be respected by the view template cache digestor
 
-Once you've done that, any time you generate a controller or scaffold, you'll get Haml instead of ERB templates. On top of that, when your Rails application loads, Haml will be loaded and initialized completely automatically! The modern world is just so amazing.
+Pretty fancy, eh? The modern world is just so amazing.
+
+### Older versions of Rails
+
+The current version of Haml-rails requires 4.0.1 or later.
+
+Haml-rails version 0.4 is the last version to support Rails 3. To use it, add this line to your Gemfile:
+
+    gem "haml-rails", "~> 0.4.0"
 
 ### Contributors
 
@@ -24,4 +36,3 @@ Haml generators originally from [rails3-generators](http://github.com/indirect/r
 ### License
 
 Ruby license or MIT license, take your pick.
->>>>>>> upstream/master
