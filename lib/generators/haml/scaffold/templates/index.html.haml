@@ -1,17 +1,17 @@
-%h1 Listing <%= plural_table_name %>
+%h1 Listings Retrurned <%= plural_table_name %>
 
 %table.table.table-bordered.table-striped.table-hover
   %tr
-  <% for attribute in attributes -%>
-  %th <%= attribute.human_name %>
-  <% end -%>
+<% for attribute in attributes -%>
+    %th <%= attribute.human_name %>
+<% end -%>
     %th Show
     %th Edit
     %th Delete
 - @<%= plural_table_name %>.each do |<%= singular_table_name %>|
   %tr
 <% for attribute in attributes -%>
-  %td= <%= singular_table_name %>.<%= attribute.name %>
+    %td= <%= singular_table_name %>.<%= attribute.name %>
 <% end -%>
     %td= link_to 'Show', <%= singular_table_name %>
     %td= link_to 'edit_dit', edit_<%= singular_table_name %>_path(<%= singular_table_name %>)
