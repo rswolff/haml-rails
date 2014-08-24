@@ -8,13 +8,13 @@
     %th Show
     %th Edit
     %th Delete
-  - @<%= plural_table_name %>.each do |<%= singular_table_name %>|
+  - @<%= plural_table_name %>.each do | <%= singular_table_name %> |
     %tr
 <% for attribute in attributes -%>
       %td= <%= singular_table_name %>.<%= attribute.name %>
 <% end -%>
       %td= link_to 'Show', <%= singular_table_name %>
-      %td= link_to 'edit_dit', edit_<%= singular_table_name %>_path(<%= singular_table_name %>)
+      %td= link_to 'Edit', edit_<%= singular_table_name %>_path(<%= singular_table_name %>)
       %td= link_to 'Delete', <%= singular_table_name %>, :method => :delete, :data => { :confirm => 'Are you sure?' }
 %br
 
